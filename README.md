@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Setup Steps
+1. Unzip the folder
+2. Open a terminal and get in to the folder
+3. Run `npm install`
+4. After download finised you are goot to go with `npm start`
+
+
+
+# Default React Information
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
