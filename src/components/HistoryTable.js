@@ -11,7 +11,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.body}`]: {
         fontSize: 14,
         backgroundColor: theme.palette.primary.main,
-        color: theme.palette.primary.contrastText,
+        color: theme.palette.text.primary,
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
     },
 }));

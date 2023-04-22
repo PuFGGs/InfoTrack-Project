@@ -1,12 +1,12 @@
-import { Box, Divider, Paper, Stack, Typography } from "@mui/material";
+import { Box, Paper, Stack, Typography } from "@mui/material";
 
 
 
 export default function InfoCard({ data }) {
     return (
         <Paper elevation={9} sx={{
-            backgroundColor: (t) => t.palette.secondary.light,
-            color: (t) => t.palette.secondary.contrastText,
+            backgroundColor: (t) => t.palette.primary.light,
+            color: (t) => t.palette.primary.contrastText,
             padding: '32px',
             overflow: 'hidden'
         }}>
@@ -18,17 +18,17 @@ export default function InfoCard({ data }) {
                     {data.infosLeft.map((x, idx) => (
                         <Box key={idx}>
                             <Typography variant='h6'>{x.label}</Typography>
-                            <Typography variant='body1'>{x.context}</Typography>
+                            <Typography color='text.primary' variant='body1'>{x.context}</Typography>
                         </Box>
                     ))}
                 </Stack>
 
-                {data.infosRight != undefined ? (
+                {data.infosRight !== undefined ? (
                     <Stack gap={2} direction='column'>
                         {data.infosRight.map((x, idx) => (
                             <Box key={idx}>
                                 <Typography variant='h6'>{x.label}</Typography>
-                                <Typography variant='body1'>{x.context}</Typography>
+                                <Typography color='text.primary' variant='body1'>{x.context}</Typography>
                             </Box>
                         ))}
                     </Stack>

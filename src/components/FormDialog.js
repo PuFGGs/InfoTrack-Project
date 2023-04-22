@@ -1,11 +1,5 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
+import { Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
 import ComboBox from './ComboBox';
 import { postSearch } from '../hooks/queries';
 
@@ -76,7 +70,7 @@ export default function FormDialog({ update }) {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose} variant="outlined" color='error'>Cancel</Button>
-                    <Button onClick={handleSubmit} variant="outlined" color='success' >Search</Button>
+                    <Button onClick={handleSubmit} variant="outlined" color='success'>Search</Button>
                 </DialogActions>
             </Dialog>
         </div>

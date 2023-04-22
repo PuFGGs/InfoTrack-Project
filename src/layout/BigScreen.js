@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AppBar, Box, Divider, Grid, Paper, Stack, Toolbar, Typography } from "@mui/material";
+import {Grid, Paper, Stack, Typography } from "@mui/material";
 import Header from "../components/Header";
 import HistoryTable from "../components/HistoryTable";
 import HistoryChart from "../components/HistoryChart";
@@ -11,7 +11,7 @@ export default function BigScreen() {
 
   const [history, setHistory] = useState([]);
   const [chartData, setChartData] = useState([]);
-  const [topSearch, setTopSearch] = useState({ avarage: 0 });
+  const [topSearch, setTopSearch] = useState({ average: 0 });
 
   const lastSearchData = {
     title: "Here is your last search!",
@@ -35,7 +35,7 @@ export default function BigScreen() {
     ],
     infosRight: [
       { label: "Search Phrases:", context: topSearch?.searchPhrase },
-      { label: "Avarage Impressions:", context: topSearch?.avarage },
+      { label: "Average Impressions:", context: topSearch?.average },
     ]
   }
 
@@ -47,7 +47,7 @@ export default function BigScreen() {
     for (let i = 0; i < chartData.length; i++) {
       const element = chartData[i];
 
-      if (element?.avarage > topSearch.avarage) {
+      if (element?.average > topSearch.average) {
         setTopSearch(element)
         console.log(element)
       }
@@ -79,13 +79,13 @@ export default function BigScreen() {
       >
         <Grid item md={12} sm={8} xs={4}>
           <Paper elevation={9} component={Stack} alignItems='left' sx={{
-            backgroundColor: (t) => t.palette.secondary.light,
-            color: (t) => t.palette.secondary.contrastText,
+            backgroundColor: (t) => t.palette.primary.light,
+            color: (t) => t.palette.primary.contrastText,
             padding: '32px',
             overflow: 'hidden'
           }}>
             <Typography variant='h4'>Welcome to the InfoTrack Project!</Typography>
-            <Typography variant='body1'>You can start using it imadiatelly by clicking the "New Search" button at the top right corner!</Typography>
+            <Typography color='text.primary' variant='body1'>You can start using it immediately by clicking the "New Search" button at the top right corner!</Typography>
           </Paper>
 
 
@@ -105,15 +105,15 @@ export default function BigScreen() {
             boxShadow: 'none',
             overflow: 'hidden',
           }}>
-            <Typography variant='h4'>Avarage Impression Chart</Typography>
+            <Typography variant='h4'>Average Impression Chart</Typography>
             <HistoryChart data={chartData} />
           </Paper>
         </Grid>
 
         <Grid item md={12} sm={8} xs={4}>
           <Paper elevation={9} component={Stack} alignItems='left' gap={1} sx={{
-            backgroundColor: (t) => t.palette.secondary.light,
-            color: (t) => t.palette.secondary.contrastText,
+            backgroundColor: (t) => t.palette.primary.light,
+            color: (t) => t.palette.primary.contrastText,
             padding: '32px',
             overflow: 'hidden'
           }}>

@@ -7,16 +7,15 @@ import { createTheme ,ThemeProvider } from "@mui/material";
 const theme = createTheme({
   palette: {
     primary: {
-      light: '#f1fbff',
+      light: '#242D38',
       main: '#161d20',
       dark: '#687074',
-      contrastText: '#cccccc',
+      contrastText: '#64d9ff',
     },
     secondary: {
       light: '#64d9ff',
       main: '#00a8e8',
       dark: '#0079b5',
-      chart: 'rgba(100, 217, 255, 0.5)',
       contrastText: '#161d20',
     },
     error: {
@@ -50,7 +49,7 @@ const theme = createTheme({
     },
     divider: '#1c1c1c',
     text: {
-      primary: '#cccccc',
+      primary: '#f1fbff',
       disabled: '#6a6d7b',
       hint: '#6a6d7b',
       secondary: '#a4a29e',

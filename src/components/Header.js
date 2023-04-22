@@ -6,7 +6,7 @@ export default function Header({update}) {
     return (
         <AppBar sx={{position: 'unset'}}>
             <Toolbar sx={{ justifyContent: 'space-between' }}>
-                <Typography variant="h6" align="center">
+                <Typography color='secondary' variant="h6" align="center">
                     InfoTrack Project
                 </Typography>
 

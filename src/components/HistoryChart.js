@@ -1,4 +1,4 @@
-import { Bar, Pie } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
 import {
     Chart as ChartJS,
@@ -37,14 +37,14 @@ export default function HistoryChart({ data }) {
     });
 
     useEffect(() => {
-        var labels = data?.map((data) => `${data.searchPhrase} (${data.url})`);
-        var impressionsData = data?.map((data) => data.avarage);
+        var labels = data?.map((data) => { if (data.average > 0) return `${data.searchPhrase} (${data.url})` });
+        var impressionsData = data?.map((data) => { if (data.average > 0) return data.average });
 
         setChartData({
             labels: labels,
             datasets: [
                 {
-                    label: "Avarage Impressions",
+                    label: "Average Impressions",
                     data: impressionsData,
                     backgroundColor: "rgba(100, 217, 255, 0.7)",
                     borderColor: "#64d9ff",

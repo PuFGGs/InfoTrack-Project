@@ -9,7 +9,7 @@ export default function ComboBox({values, setValue}) {
         fullWidth
         id="combo-box"
         options={searchEngines}
-        renderInput={(params) => <TextField {...params} variant="outlined" color='secondary' label="Engine" />}
+        renderInput={(params) => <TextField {...params} variant="outlined" color='secondary' label="Search Engine" />}
         onChange={(event, newValue) => {
           setValue({...values, ['engine']: newValue});
         }}
