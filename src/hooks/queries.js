@@ -10,12 +10,12 @@ const postSearch = (searchPhrase, url, searchEngineId, setHistory) => {
         url: url,
         searchEngineId: searchEngineId
     })
-    ?.then((res) => {
-        getHistory(setHistory)
-    })
-    .catch((error) => {
-        console.log(error);
-    });
+        ?.then((res) => {
+            getHistory(setHistory)
+        })
+        .catch((error) => {
+            console.log(error);
+        });
 };
 export { postSearch };
 
@@ -23,7 +23,7 @@ export { postSearch };
 const getHistory = (setHistory) => {
     axios.get(`${URL}/Search/history`)?.then((res) => {
         setHistory(res.data)
-    });
+    }).catch((err) => { setHistory([]) });
 };
 export { getHistory };
 
